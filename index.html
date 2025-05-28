@@ -1,0 +1,88 @@
+<html>
+<head>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<link rel="stylesheet" href="air.css">
+<script src="air_final.js"></script>
+<script src="air_plots.js"></script>
+</head>
+<body><table width="800px"><tbody>
+<tr>
+  <td id='title' colspan='4'>BATH AIR QUALITY DASHBOARD</td>
+</tr>
+<tr>
+  <td id='map_td'><img id='map' src=''></td>
+  <td colspan='2' id='stations'>
+    <br><input type="radio" id='all' name="station" value="all" checked="checked"><label for="all">All Sensors</label><br>
+    <input type="radio" id='lra' name="station" value="londonrdaurn" ><label for="lra">London Road Aurn</label><br>
+    <input type="radio" id='guild' name="station" value="guildhall"><label for="guild">Guildhall</label><br>
+    <input type="radio" id='lre' name="station" value="londonrdenc" ><label for="lre">London Road Enc</label><br>
+    <input type="radio" id='windsor' name="station" value="windsorbridge"><label for="windsor">Windsor Bridge</label><br>
+    <br><div class='small_text'>Live data collected every 15 or 60 mins.</div></td>
+
+  <td id='input'>
+    <b>Pollutants: </b>
+    <input id='NO2' type="radio" name="pollutant" value="NO2" checked="checked">NO2
+    <input id='PM10' type="radio" name="pollutant" value="PM10">PM10
+    <br><div id='pollutant_text'><br>
+    Nitrogen dioxide (NO2) is of concern to public health in high concentrations. Combustion
+    emissions (NOx) oxidise in the atmosphere to form NO2.</div>
+    <br><b>Timing:</b>
+    <input type="radio" name="time" value="weeks" checked="checked">Weekly
+    <input type="radio" name="time" value="years">Annually</td>
+</tr>
+<tr>
+  <td id='scale'>Average readings 2015-16</td>
+  <td colspan='3' id='how'>Average readings 2015-16 against 3 DEFRA measures</td>
+</tr>
+<tr>
+  <td id='minmax_td'>
+    <table id='minmax'><tr>
+      <td style="text-align: left;">min</td>
+      <td style="text-align: right;">max</td></tr><tr>
+      <td colspan='2'><img src='minmax.gif'></td></tr>
+    </table></td>
+  <td class='how_charts' colspan='3'>
+    <table id='aqi'><tr>
+      <td rowspan="2" id='aqi_title'>1. Air Quality Index</td>
+      <td class='aqi_img'colspan=2>low</td>
+      <td class='aqi_img'>mid</td>
+      <td class='aqi_img'>high</td>
+      <td class='aqi_img'>v.high</td></tr><tr>
+      <td><img width='25px' src='lessthan.jpg'></td>
+      <td><img width='75px' src='low.jpg'></td>
+      <td><img src='mid.jpg' width='75px'></td>
+      <td><img width='75px' src='high.jpg'></td>
+      <td><img width='25px' src='highest.jpg'></td></tr>
+      </table></td>
+</tr>
+<tr>
+  <td rowspan="4" id='greypie'></td>
+  <td colspan='2' rowspan='4' id='pie'></td>
+  <td id='labellimit'></td>
+</tr>
+<tr>
+  <td  id='limit'></td>
+</tr>
+<tr>
+  <td id='labelmax'></td>
+</tr>
+<tr>
+  <td id='max'></td>
+</tr>
+<tr>
+  <td id='influencers' colspan='4'>Potential influencing factors</td>
+</tr>
+<tr>
+  <td class = 'small_text' colspan='4'>
+    <br><b>2015-16 averages</b> <i>(check box to highlight)</i>
+    <input type="checkbox" id='NO2_input' name="line" value="NO2">NO2&nbsp;&nbsp;
+    <input type="checkbox" id='PM10_input' name="line" value="PM10" >PM10&nbsp;&nbsp;
+    <input type="checkbox" id='weather_input' name="line" value="weather">Wind Speed&nbsp;&nbsp;
+    <input type="checkbox" id='parking_input' name="line" value="parking" >Parking Capacity
+  </td>
+</tr>
+<tr>
+  <td id='line' colspan='4'></td>
+</tr>
+
+</tbody></table></body></html>

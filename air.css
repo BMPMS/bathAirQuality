@@ -1,0 +1,212 @@
+body{
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+table{
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 0px;
+}
+
+
+input[name="station"] {
+    display:none;
+}
+input[name="station"]:checked + label {
+    color: blue;
+}
+
+input[name="station"]:disabled + label {
+    color: lightgrey;
+}
+
+
+.small_text,#pollutant_text {
+  font-size: 14px;
+}
+
+#stations{
+  width: 280px;
+  padding: 5px;
+}
+
+
+#input{
+  padding: 5px;
+  width: 300px;
+}
+#title{
+  font-size: 24px;
+  padding: 10px;
+  background-color: #303030;
+  color: white;
+}
+
+#how{
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: #D0D0D0;
+  color: black;
+}
+
+#aqi{
+  width:100%;
+  padding: 10px;
+
+}
+#minmax{
+  width:100px;
+  padding: 10px;
+
+}
+.aqi_img{
+  font-size: 12px;
+  text-align: center;
+}
+
+
+.NO2,.PM10,.weather,.parking {
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+
+#max svg, #limit svg {
+  font-family: sans-serif;
+  font-size: 10px;
+	width: 250px;
+	height: 85px;
+  align-items: center;
+  fill: grey;
+
+}
+
+#max, #limit{
+  background-color: white;
+}
+
+#labellimit,#labelmax,#aqi_title{
+  font-size: 14px;
+  background-color: white;
+  padding: 10px;
+  text-align: left;
+
+}
+
+
+#pie svg,#greypie svg{
+  font-family: sans-serif;
+  font-size: 10px;
+	width: 290px;
+	height: 290px;
+}
+
+#greypie,#minmax_td {
+  background-color: #F0F0F0;
+
+}
+#pie{
+  background-color: white;
+}
+
+#scale{
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: #585858;
+  color: white;
+}
+
+#line svg{
+  font-family: sans-serif;
+  font-size: 10px;
+	width: 800px;
+	height: 200px;
+}
+
+
+.how_charts{
+  background-color: white;
+}
+
+#influencers {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background-color: #909090;
+}
+
+.x_axis text, .z_axis text, .y_axis text {
+    font-family: sans-serif;
+    font-size: 10px;
+  }
+
+.x_axis path, .y_axis path,
+.x_axis line, .y_axis line,.air_axis line{
+    fill: none;
+    stroke: #000;
+    shape-rendering: geometricPrecision;
+}
+
+.z_axis line, .z_axis path {
+    fill: none;
+    stroke: deepskyblue;
+    stroke-width: 2px;
+    shape-rendering: crispEdges;
+}
+
+.m_axis line, .m_axis path {
+    fill: none;
+    stroke: grey;
+    opacity: 0.8;
+    stroke-width: 1px;
+    stroke-dasharray: 2,2;
+    shape-rendering: crispEdges;
+}
+
+.z_axis text, .z_axis tick { display: none; }
+
+.y_axis tick {display: none; }
+
+.weather_axis tick, .weather_axis text, .weather_axis path {display: none; }
+
+.parking_axis tick, .parking_axis text, .parking_axis path {display: none; }
+
+.y_axis path { display: none; }
+
+.x_axis tick, .y_axis tick {
+  text-align: left;
+  stroke: grey;
+	stroke-width: 0.3px;
+}
+
+
+
+.small_tooltip{
+    visibility: hidden;
+    position: absolute;
+    text-align: left;
+    padding: 3px;
+    background: white;
+    pointer-events: none;
+    font-size: 10px;
+    width: 50px;
+    height: 10px;
+}
+
+
+.tooltip{
+    visibility: hidden;
+    position: absolute;
+    text-align: left;
+    padding: 3px;
+    background: white;
+    pointer-events: none;
+    width: 105px;
+    font-size: 10px;
+    height: 10px;
+}
